@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked Appointments</title>
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body onload="init();">
+<div class="navbar">
+    <a href="booking.html">Termin buchen</a>
+    <a href="#" class="active">Termin ansehen</a>
+<!--    <a href="#">QR Code</a>-->
+    <a href="logout" class="roll">Abmelden</a>
+</div>
+
+<h1></h1>
+
+<div class="row">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Termin-Nummer</th>
+                <th>Patient-Vorname</th>
+                <th>Patient-Lastname</th>
+                <th>Impfort</th>
+                <th>Impfung</th>
+                <th>Datum</th>
+                <th>BeginnZeit</th>
+                <th>EndeZeit</th>
+                <th>Stornierung</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+</body>
+<script src="appointment.js"></script>
+</html>

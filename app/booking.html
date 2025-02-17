@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Termin Buchen</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Impftermin-Buchung</title>
+    <link rel="stylesheet" href="booking.css">
+      <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="#" class="active">Termin buchen</a>
+    <a href="appointment.html">Termin ansehen</a>
+<!--    <a href="#">QR Code</a>-->
+    <a href="logout" class="roll">Abmelden</a>
+</div>
+<div class="container">
+    <h1>Impftermin-Buchung</h1>
+    <form action="book" method="post">
+
+        <label for="bookingType">Buchungstyp:</label>
+        <select id="bookingType" name="bookingType" class="input-field">
+            <option value="myself">Für mich selbst</option>
+            <option value="relative">Für einen Angehörigen</option>
+        </select><br><br>
+
+        <div id="relativeInfo" style="display:none;">
+            <label for="firstname">Vorname:</label>
+            <input type="text" id="firstname" name="firstname" class="input-field">
+
+            <label for="lastname">Nachname:</label>
+            <input type="text" id="lastname" name="lastname" class="input-field">
+
+        </div>
+
+        <label for="location">Standort:</label>
+        <select id="location" name="location" required class="input-field" onchange="getVaccinesAndTimeSlots(this.value)" >
+            <!-- Weitere Standorte hier einfügen -->
+        </select>
+
+        <label for="vaccine">Impfstoff:</label>
+        <select id="vaccine" name="vaccine" required class="input-field">
+            <option value="">Bitte wählen</option>
+        </select>
+
+        <label for="appointmentdate">Datum:</label>
+        <input type="date" id="appointmentdate" name="date" required class="input-field">
+
+        <label for="timeslots">Zeit:</label>
+        <select id="timeslots" name="timeslots" required class="input-field">
+            <option value="">Bitte wählen</option>
+        </select>
+
+        <button type="submit">Termin buchen</button>
+    </form>
+<!--    <form class="logout-form" action="logout" method="post">-->
+<!--        <input type="submit" value="Abmelden">-->
+<!--    </form>-->
+    <a href="logout" class="logout-form">Abmelden</a>
+</div>
+</body>
+<script src="booking.js"></script>
+</html>
+

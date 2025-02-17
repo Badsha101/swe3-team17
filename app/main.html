@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impftermin-Buchung</title>
+    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Impftermin-Buchung</h1>
+    <form action="AppointmentServlet" method="post" id=appointmentForm"">
+
+        <label for="bookingType">Booking Type:</label>
+    <select id="bookingType">
+        <option value="myself">Myself</option>
+        <option value="relative">Relative</option>
+    </select><br><br>
+
+    <div id="relativeInfo" style="display:none;">
+
+        <label for="firstname">Vorname :</label>
+        <input type="text" id="firstname" name="firstname">
+
+        <label for="lastname">Nachname :</label>
+        <input type="text" id="lastname" name="lastname">
+
+        <label for="dateofbirth">Geburtsdatum:</label>
+        <input type="date" id="dateofbirth" required><br><br>
+
+
+        <label for="city">Stadt :</label>
+        <input type="text" id="city" name="city">
+
+        <label for="postalcode">Postleitzahl :</label>
+        <input type="text" id="postalcode" name="postalcode">
+    </div>
+
+    <label for="location">Standort:</label>
+    <select id="location" required onchange="updateVaccineOptions()">
+        <option value="">Bitte wählen</option>
+        <option value="location1">Standort 1</option>
+        <option value="location2">Standort 2</option>
+        <!-- Weitere Standorte hier einfügen -->
+    </select><br><br>
+
+    <label for="vaccine">Impfstoff:</label>
+    <select id="vaccine" required>
+        <option value="">Bitte wählen</option>
+    </select><br><br>
+
+    <label for="date">Datum:</label>
+    <input type="date" id="date" required><br><br>
+
+    <label for="time">Zeit:</label>
+    <select id="time" name="time" required><br><br>
+    </select><br><br>
+
+    <button type="submit">Termin buchen</button>
+</form>
+
+<script src="main.js"></script>
+</body>
+</html>
+

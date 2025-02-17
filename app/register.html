@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<link rel="stylesheet" href="indexStyle.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="navbar.css">
+
+<body onload="getUserId()">
+<div class="navbar">
+    <a href="index.html" >Home</a>
+    <a href="#" class="active">Registrieren</a>
+    <a href="login.html"  >Einloggen</a>
+    <a href="adminLogin.html" class="roll" >Admin</a>
+
+    <!--    <a href="#">Ueber Uns</a>-->
+</div>
+    <div class="container">
+        <h1>Registrieren</h1>
+        <form action="insertUser" method="post">
+
+
+
+            <label for="firstname">Vorname :</label>
+            <input type="text" id="firstname" name="firstname" required class="input-field" >
+
+            <label for="lastname">Nachname :</label>
+            <input type="text" id="lastname" name="lastname" required class="input-field" >
+
+
+
+            <label for="email">E-mail Adresse :</label>
+            <input type="email" id="email" name="email" required class="input-field">
+
+            <label for="password">Passwort :</label>
+            <input type="password" id="password" name="password" required class="input-field">
+
+
+
+
+            <br><br>
+            <button type="submit">Registrieren</button>
+
+
+        </form>
+        <p><a href="login.html" class="links">Einloggen</a></p>
+    </div>
+
+    <script>
+       // Get the error parameter from the URL (assuming it's passed as a query parameter)
+       const urlParams = new URLSearchParams(window.location.search);
+       const error = urlParams.get("error");
+
+       // Check for the error parameter and display the message if it's "1"
+       if (error === "1") {
+         const errorElement = document.createElement("p");
+         errorElement.style.color = "red";
+         errorElement.textContent = "Registration failed. Please try again.";
+
+
+         const parentElement = document.querySelector(".container"); //
+         parentElement.appendChild(errorElement);
+       }  else if(error === "emailexists") {
+         const errorElement = document.createElement("p");
+         errorElement.style.color = "red";
+         errorElement.textContent = "Email exists, please enter another email";
+
+
+         const parentElement = document.querySelector(".container"); //
+         parentElement.appendChild(errorElement);
+       }
+
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Impfungen</title>
+    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adminStyle.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+<div class="navbar">
+
+    <a href="admin.html">Home</a>
+    <a href="zentrums.html">Zentrums</a>
+    <a href="timeSlots.html">Zeitfensters</a>
+    <a href="counter.html">Counters</a>
+    <a href="logout" class="roll" >Abmelden</a>
+
+
+</div>
+
+<div class="container">
+    <h1>Vaccines</h1>
+
+    <select id="location" >
+        <!--    <option value="">Bitte wählen</option>-->
+    </select>
+
+    <table id="centerTable">
+        <thead>
+        <!--    <tr>-->
+        <!--        <th>ID</th>-->
+        <!--        <th>Name</th>-->
+        <!--    </tr>-->
+        </thead>
+        <tbody>
+        <!-- Vaccine data will be populated here dynamically -->
+        </tbody>
+    </table>
+    <button id="addVacButton">Add Vaccine</button>
+
+</div>
+</body>
+<script src="impfungen.js"></script>
+
+
+</html>

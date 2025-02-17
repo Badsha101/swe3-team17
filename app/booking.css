@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e395e;
+    margin: 0;
+    padding: 0;
+
+    /*background-image: url('corona background.jpeg');*/
+    background-image: linear-gradient(#0e395e, antiquewhite);
+    background-repeat: no-repeat;
+    color: #0e395e;
+    background-size: cover;
+    background-attachment: fixed;
+
+    background-position: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background-color: #f0f8ffe6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0ba1ec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0ba1ec;
+}
+
+.logout-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logout-form {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-form :hover {
+    background-color: #d32f2f;
+}
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+}
+.navbar {
+
+     overflow: hidden;
+     background-color: #10519b78; /* Background color of the navbar */
+     position: fixed; /* Fix the navbar at the top */
+     top: 0;
+     width: 100%; /* Full width */
+ }
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /* Text color of the links */
+    text-align: center;
+    padding: 14px 16px; /* Padding of the links */
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #4CAF50; /* Background color of the links on hover */
+    color: black; /* Text color of the links on hover */
+}
+
+/* Add an active class to highlight the current page */
+.navbar a.active {
+    background-color: #0ba1ec; /* Background color of the active link */
+    color: white; /* Text color of the active link */
+}

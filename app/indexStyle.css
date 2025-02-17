@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    background-image: linear-gradient(#0e395e, antiquewhite);
+    /*background-image: url('corona background.jpeg');*/
+
+    background-color: #0e395e;
+    background-repeat: no-repeat;
+    /*color: #0e395e;*/
+    /* Set background size to cover entire viewport */
+    background-size: cover;
+    /* Set background attachment to fixed if you want it to remain fixed while scrolling */
+    background-attachment: fixed;
+    /* Add a fallback background color */
+    /* Set background repeat to no-repeat */
+    /* Center the background image */
+    background-position: center;
+    /* Set the height of the background */
+    height: 100vh; /* 100% of the viewport height */
+
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 1, 0.5);
+    background-color: #f0f8ffe6;
+    text-align: center;
+}
+
+/*h1 {*/
+/*    font-weight: bold;*/
+/*    color: #007BFF;*/
+/*}*/
+
+p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.emoji {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+
+.links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #0056b3;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+/* CSS for the navigation bar */
+/*.navbar {*/
+/*    overflow: hidden;*/
+/*    background-color: #10519b78; !* Background color of the navbar *!*/
+/*    position: fixed; !* Fix the navbar at the top *!*/
+/*    top: 0;*/
+/*    width: 100%; !* Full width *!*/
+/*}*/
+
+/*!* Style the links inside the navigation bar *!*/
+/*.navbar a {*/
+/*    float: left;*/
+/*    display: block;*/
+/*    color: #f2f2f2; !* Text color of the links *!*/
+/*    text-align: center;*/
+/*    padding: 14px 16px; !* Padding of the links *!*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*!* Change color on hover *!*/
+/*.navbar a:hover {*/
+/*    background-color: #ddd; !* Background color of the links on hover *!*/
+/*    color: black; !* Text color of the links on hover *!*/
+/*}*/
+
+/*!* Add an active class to highlight the current page *!*/
+/*.navbar a.active {*/
+/*    background-color: #4CAF50; !* Background color of the active link *!*/
+/*    color: white; !* Text color of the active link *!*/
+/*}*/

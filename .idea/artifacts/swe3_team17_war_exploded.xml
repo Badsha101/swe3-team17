@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="swe3-team17:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/swe3_team17_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="swe3-team17" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="activation" />
+          <element id="library" level="project" name="commons-pool2-2.11.1" />
+          <element id="library" level="project" name="jakarta.websocket-api-2.1.0" />
+          <element id="library" level="project" name="javase-3.5.0" />
+          <element id="library" level="project" name="jedis-4.3.1" />
+          <element id="library" level="project" name="jedis-5.0.0" />
+          <element id="library" level="project" name="json-20230618" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="swe3-team17/web/Web" />
+    </root>
+  </artifact>
+</component>

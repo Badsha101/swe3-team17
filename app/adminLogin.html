@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<link rel="stylesheet" href="indexStyle.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="navbar.css">
+
+<!--<body onload="getUserId()">-->
+<div class="navbar">
+    <a href="index.html" >Home</a>
+    <a href="register.html">Registrieren</a>
+    <a href="#" class="active" >Einloggen</a>
+    <a href="login.html" class="roll" >User</a>
+    <!--    <a href="#">Ueber Uns</a>-->
+</div>
+
+<div class="container">
+    <h1>Admin Login Seite</h1>
+    <form action="adminLogin" method="post"> <!-- Change method to "post" -->
+
+
+
+
+        <label for="email">Email :</label>
+        <input type="text" id="email" name="email" required><br>
+        <label for="password">Passwort :</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Einloggen</button>
+    </form>
+
+<!--    <p><a href="index.html" class="links">Home</a></p>-->
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get("error");
+        // const registration = urlParams.get("registration");
+
+
+        // Display error message if login fails
+        if (error === "1") {
+            const errorMessage = document.createElement("p");
+            errorMessage.textContent = "Invalid email or password. Please try again.";
+            errorMessage.style.color = "red";
+            const parentElement = document.querySelector(".container");
+            parentElement.appendChild(errorMessage);
+        }
+        // if (registration === "success") {
+        //     const successMessage = document.createElement("p");
+        //     successMessage.textContent = "Your Registration is Successful. Please Login.";
+        //     successMessage.style.color = "green";
+        //     const parentElement = document.querySelector(".container");
+        //     parentElement.appendChild(successMessage)}
+    </script>
+
+</div>
+</body>
+</html>

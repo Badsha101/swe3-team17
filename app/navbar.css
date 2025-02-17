@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+
+    overflow: hidden;
+    background-color: rgb(27 95 153 / 71%); /* Background color of the navbar */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    width: 100%; /* Full width */
+    flex-wrap: nowrap;
+}
+
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    float: left; /* Make all links float left */
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #0ba1ec;
+
+}
+
+/*.roll {*/
+/*    background-color: #f44336;*/
+/*    border: none;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 20px;*/
+/*    text-decoration: none;*/
+/*    display: block;*/
+/*    margin: 0;*/
+/*    float: right; !* Float .roll element to the right *!*/
+/*}*/
+
+.roll:hover {
+    background-color: #d32f2f;
+}
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     /*background-color: #f0f0f0; !* Set your desired background color *!*/
+     /*padding: 5px; !* Add some padding for spacing *!*/
+ }
+
+.roll {
+    background-color: #4CAF50;
+    margin-left: auto; /* Push the "Admin" link to the right */
+   /* Set your desired button color */
+    color: #ffffff; /* Set text color */
+    padding: 8px 16px; /* Add padding for button appearance */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline from the link */
+}

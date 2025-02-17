@@ -1,0 +1,4 @@
+user=hamali
+webapp=docker-hamali-java
+manager=docker-hamali-manager
+baseurl=https://informatik.hs-bremerhaven.de
