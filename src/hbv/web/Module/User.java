@@ -1,4 +1,4 @@
-package hbv.example.Module;
+package hbv.web.Module;
 
 import javax.swing.text.StyledEditorKit;
 

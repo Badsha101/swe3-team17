@@ -1,4 +1,4 @@
-package hbv.example.Servlets;
+package hbv.web.Servlets;
 
 
 import jakarta.servlet.RequestDispatcher;
@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet("/logout")
+
 public class LogoutServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

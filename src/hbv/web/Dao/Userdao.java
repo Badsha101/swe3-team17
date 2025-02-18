@@ -1,8 +1,8 @@
-package hbv.example.Dao;
+package hbv.web.Dao;
 
-import hbv.example.Module.User;
-import hbv.example.database.DBUtil;
-import hbv.example.database.Queries;
+import hbv.web.Module.User;
+import hbv.web.db.DBUtil;
+import hbv.web.db.Queries;
 
 
 import java.sql.Connection;
@@ -16,7 +16,7 @@ public class Userdao {
 
     public User isValidUser(String email, String password) {
         String query = "SELECT * FROM user WHERE Email = ? AND Password = ?";
-        User user = null;
+        hbv.web.Module.User user = null;
 
         try (
                 Connection connection = DBUtil.getConnection();

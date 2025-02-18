@@ -1,11 +1,11 @@
-package hbv.example.Servlets;
+package hbv.web.Servlets;
 
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.List;
 
-import hbv.example.database.DBUtil;
+import hbv.web.db.DBUtil;
 import org.json.*;
 
 import hbv.example.Module.VaccinationCenters;
@@ -13,8 +13,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
-@WebServlet("/Centerliste")
-public class Centerliste extends HttpServlet {
+public class Centerlist extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         JSONArray allCentersJson;

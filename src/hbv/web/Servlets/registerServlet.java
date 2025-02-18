@@ -1,4 +1,4 @@
-package hbv.example.Servlets;
+package hbv.web.Servlets;
 
 import hbv.example.Dao.Userdao;
 import hbv.example.Module.User;
@@ -8,11 +8,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import javax.swing.*;
 import java.io.IOException;
 
 @WebServlet("/registrierenServlet")
-public class registrierenServlet extends HttpServlet {
+public class registerServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
