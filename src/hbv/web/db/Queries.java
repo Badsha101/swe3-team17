@@ -1,12 +1,4 @@
-package hbv.example.database;
+package hbv.web.db;
 
-import hbv.example.Module.*;
 public class Queries {
-
-
-
-
-
-
-
 }

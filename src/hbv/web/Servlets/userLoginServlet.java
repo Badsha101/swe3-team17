@@ -1,8 +1,8 @@
-package hbv.example.Servlets;
+package hbv.web.Servlets;
 
 
-import hbv.example.Dao.Userdao;
-import hbv.example.Module.User;
+import hbv.web.Dao.Userdao;
+import hbv.web.Module.User;
 
 
 import jakarta.servlet.RequestDispatcher;

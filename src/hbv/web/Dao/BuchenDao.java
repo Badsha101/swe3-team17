@@ -1,6 +1,6 @@
-package hbv.example.Dao;
+package hbv.web.Dao;
 
-import hbv.example.database.DBUtil;
+import hbv.web.db.DBUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

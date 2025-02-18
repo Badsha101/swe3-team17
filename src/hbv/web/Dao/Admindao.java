@@ -1,7 +1,7 @@
-package hbv.example.Dao;
+package hbv.web.Dao;
 
-import hbv.example.Module.Admin;
-import hbv.example.database.DBUtil;
+import hbv.web.Module.Admin;
+import hbv.web.db.DBUtil;
 
 
 import java.sql.Connection;
@@ -15,7 +15,7 @@ public class Admindao {
 
        Admin admin= null;
 
-      try(Connection conn=DBUtil.getConnection();
+      try(Connection conn= DBUtil.getConnection();
           PreparedStatement preparedStatement= conn.prepareStatement(Query);
       ){
 

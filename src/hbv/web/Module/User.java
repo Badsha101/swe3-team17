@@ -1,6 +1,4 @@
-package hbv.example.Module;
-
-import javax.swing.text.StyledEditorKit;
+package hbv.web.Module;
 
 public class User {
     private int id;

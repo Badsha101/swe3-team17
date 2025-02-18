@@ -6,12 +6,88 @@
 
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
-    <servlet-class>hbv.web.HelloServlet</servlet-class>
+    <servlet-class>hbv.web.Servlets.HelloServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>hbv.web.Servlets.adminLoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>registerServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>adminLoginServlet</servlet-name>
+    <servlet-class>hbv.web.Servlets.adminLoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>adminLoginServlet</servlet-name>
+    <url-pattern>/adminLogin</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>userLoginServlet</servlet-name>
+    <servlet-class>hbv.web.Servlets.adminLoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>userLoginServlet</servlet-name>
+    <url-pattern>/userLogin</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>Centers</servlet-name>
+    <servlet-class>hbv.web.Servlets.adminLoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Centers</servlet-name>
+    <url-pattern>/centers</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>Centerlist</servlet-name>
+    <servlet-class>hbv.web.Servlets.adminLoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Centerlist</servlet-name>
+    <url-pattern>/centerlist</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>Vaccines</servlet-name>
+    <servlet-class>hbv.web.Servlets.adminLoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Vaccines</servlet-name>
+    <url-pattern>/vaccines</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>Vaccinslist</servlet-name>
+    <servlet-class>hbv.web.Servlets.adminLoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Vaccinslist</servlet-name>
+    <url-pattern>/vaccinslist</url-pattern>
   </servlet-mapping>
 
 </web-app>

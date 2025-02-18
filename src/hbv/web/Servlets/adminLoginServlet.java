@@ -1,11 +1,10 @@
-package hbv.example.Servlets;
+package hbv.web.Servlets;
 
-import hbv.example.Dao.Admindao;
-import hbv.example.Module.Admin;
-import hbv.example.database.DBUtil;
+import hbv.web.Dao.Admindao;
+import hbv.web.Module.Admin;
+import hbv.web.db.DBUtil;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -13,7 +12,6 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet("/adminLoginServlet")
 public class adminLoginServlet  extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

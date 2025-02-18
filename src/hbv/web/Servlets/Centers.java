@@ -1,4 +1,4 @@
-package hbv.example.Servlets;
+package hbv.web.Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,13 +9,13 @@ import java.util.function.DoubleBinaryOperator;
 
 import org.json.*;
 
-import hbv.example.Module.VaccinationCenters;
-import hbv.example.database.DBUtil;
+import hbv.web.Module.VaccinationCenters;
+import hbv.web.db.DBUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
-@WebServlet("/Centers")
+
 public class Centers extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
