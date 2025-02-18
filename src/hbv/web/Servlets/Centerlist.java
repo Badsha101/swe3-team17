@@ -8,9 +8,8 @@ import java.util.List;
 import hbv.web.db.DBUtil;
 import org.json.*;
 
-import hbv.example.Module.VaccinationCenters;
+import hbv.web.Module.VaccinationCenters;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 public class Centerlist extends HttpServlet {
@@ -19,7 +18,7 @@ public class Centerlist extends HttpServlet {
         JSONArray allCentersJson;
         List<VaccinationCenters> allCenters;
         try (Connection con = DBUtil.getConnection()) {
-            allCenters = DBUtil.Centerliste(con);
+            allCenters = DBUtil.Centerlist(con);
         } catch (Exception e) {
 
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

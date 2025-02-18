@@ -1,4 +1,4 @@
-package hbv.example.Module;
+package hbv.web.Module;
 
 public class Admin {
 private int id;

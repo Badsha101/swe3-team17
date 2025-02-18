@@ -1,4 +1,4 @@
-package hbv.example.Module;
+package hbv.web.Module;
 
 public class VaccinationCenters {
     private Integer id;

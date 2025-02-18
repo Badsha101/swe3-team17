@@ -1,7 +1,5 @@
 package hbv.web.Module;
 
-import javax.swing.text.StyledEditorKit;
-
 public class User {
     private int id;
     private String email;

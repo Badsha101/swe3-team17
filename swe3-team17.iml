@@ -30,5 +30,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="org.json-1.6-20240205" level="project" />
   </component>
 </module>

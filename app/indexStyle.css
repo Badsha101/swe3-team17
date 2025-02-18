@@ -35,11 +35,6 @@ body {
     text-align: center;
 }
 
-/*h1 {*/
-/*    font-weight: bold;*/
-/*    color: #007BFF;*/
-/*}*/
-
 p {
     margin: 20px 0;
     line-height: 1.6;
@@ -64,33 +59,3 @@ p {
     font-size: 20px;
     text-transform: uppercase;
 }
-/* CSS for the navigation bar */
-/*.navbar {*/
-/*    overflow: hidden;*/
-/*    background-color: #10519b78; !* Background color of the navbar *!*/
-/*    position: fixed; !* Fix the navbar at the top *!*/
-/*    top: 0;*/
-/*    width: 100%; !* Full width *!*/
-/*}*/
-
-/*!* Style the links inside the navigation bar *!*/
-/*.navbar a {*/
-/*    float: left;*/
-/*    display: block;*/
-/*    color: #f2f2f2; !* Text color of the links *!*/
-/*    text-align: center;*/
-/*    padding: 14px 16px; !* Padding of the links *!*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*!* Change color on hover *!*/
-/*.navbar a:hover {*/
-/*    background-color: #ddd; !* Background color of the links on hover *!*/
-/*    color: black; !* Text color of the links on hover *!*/
-/*}*/
-
-/*!* Add an active class to highlight the current page *!*/
-/*.navbar a.active {*/
-/*    background-color: #4CAF50; !* Background color of the active link *!*/
-/*    color: white; !* Text color of the active link *!*/
-/*}*/

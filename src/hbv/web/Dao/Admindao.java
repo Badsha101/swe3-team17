@@ -1,6 +1,6 @@
 package hbv.web.Dao;
 
-import hbv.example.Module.Admin;
+import hbv.web.Module.Admin;
 import hbv.web.db.DBUtil;
 
 

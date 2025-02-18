@@ -9,8 +9,8 @@ import java.util.function.DoubleBinaryOperator;
 
 import org.json.*;
 
-import hbv.example.Module.VaccinationCenters;
-import hbv.example.database.DBUtil;
+import hbv.web.Module.VaccinationCenters;
+import hbv.web.db.DBUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;

@@ -1,8 +1,8 @@
-package hbv.example.Servlets;
+package hbv.web.Servlets;
 
 
-import hbv.example.Module.Vaccine;
-import hbv.example.database.DBUtil;
+import hbv.web.Module.Vaccine;
+import hbv.web.db.DBUtil;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
