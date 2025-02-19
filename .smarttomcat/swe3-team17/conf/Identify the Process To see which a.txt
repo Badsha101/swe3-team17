@@ -1,7 +1,0 @@
-Identify the Process: To see which application or process is using port 1099, you can run the following command in the Command Prompt to find the process ID (PID) associated with this port:
-
-netstat -ano | findstr 1099
-
-Stop the Process (if necessary): Once you identify the process using port 1099, you can stop it, if needed, by running:
-taskkill /PID <PID> /F
-

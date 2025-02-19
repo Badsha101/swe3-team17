@@ -2,14 +2,12 @@ package hbv.web.Dao;
 
 import hbv.web.Module.User;
 import hbv.web.db.DBUtil;
-import hbv.web.db.Queries;
 
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import java.io.*;
 import java.sql.SQLException;
 
 public class Userdao {
@@ -27,8 +25,12 @@ public class Userdao {
 
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
-                    // User exists, populate User object
-                    user = new User();
+                    // Fetch firstname and lastname from the database
+                    String firstname = resultSet.getString("firstname");
+                    String lastname = resultSet.getString("lastname");
+
+                    // Now create the User object with valid data
+                    user = new User(email, password, firstname, lastname);
                     user.setId(resultSet.getInt("id"));
                     user.setFirstName(resultSet.getString("firstname"));
                     user.setLastName(resultSet.getString("lastname"));

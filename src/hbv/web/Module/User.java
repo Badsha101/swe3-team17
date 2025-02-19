@@ -9,7 +9,7 @@ public class User {
     private String lastName;
 
 
-    public User() {
+    public User(String email, String password, String firstname, String lastname) {
 
     }
 
