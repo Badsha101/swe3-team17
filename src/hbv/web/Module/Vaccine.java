@@ -5,14 +5,14 @@ public class Vaccine {
 
     private Integer id;
     private String name;
-    private String count;
+    private int count;
 
 
 
-    public Vaccine(Integer id, String name, String count) {
+    public Vaccine(Integer id, String name, int count) {
         this.id = id;
         this.name = name;
-        this.count =count;
+        this.count = count;
     }
 
     public Integer getId() {
@@ -31,11 +31,11 @@ public class Vaccine {
         this.name = name;
     }
 
-    public String getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(String count) {
+    public void setCount(int count) {
         this.count = count;
     }
 }

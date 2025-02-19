@@ -5,7 +5,6 @@ package hbv.web.Servlets;
 import hbv.web.Module.Vaccine;
 import hbv.web.db.DBUtil;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -13,8 +12,6 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.sql.Connection;
-
-@WebServlet("/Vaccines")
 public class Vaccines extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,7 +22,7 @@ public class Vaccines extends HttpServlet {
         }
 
         String name = request.getParameter("Name");
-        String Count = request.getParameter("Count");
+        int Count = Integer.parseInt(request.getParameter("Count"));
 
 
 

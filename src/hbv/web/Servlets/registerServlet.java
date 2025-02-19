@@ -18,7 +18,7 @@ public class registerServlet extends HttpServlet {
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
         String email = request.getParameter("email");
-        String password = request.getParameter("password1");  // Corrected name to match the form
+        String password = request.getParameter("password1");
         String password2 = request.getParameter("password2");
 
         Userdao userdao = new Userdao();
@@ -38,10 +38,10 @@ public class registerServlet extends HttpServlet {
 
             // Create a new user object and attempt to add it to the database
             User user = new User(email, password, firstname, lastname);
-            int userAdded = userdao.addUser(user);
+            boolean userAdded = userdao.addUser(user);
 
-            if (userAdded > 0) {
-                response.sendRedirect("register.html?error=success"); // Successful registration
+            if (userAdded) {
+                response.sendRedirect("register.html?error=index.html"); // Successful registration
             } else {
                 response.sendRedirect("register.html?error=1"); // Generic failure
             }

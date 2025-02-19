@@ -1,6 +1,5 @@
 package hbv.web.Servlets;
 
-
 import java.io.IOException;
 import java.sql.*;
 import java.util.List;
@@ -17,16 +16,17 @@ public class Centerlist extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         JSONArray allCentersJson;
         List<VaccinationCenters> allCenters;
-        try (Connection con = DBUtil.getConnection()) {
-            allCenters = DBUtil.Centerlist(con);
-        } catch (Exception e) {
 
+        try (Connection con = DBUtil.getConnection()) {
+            allCenters = DBUtil.getVaccinationCenters(con);
+        } catch (Exception e) {
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             resp.getWriter().println("Internal Error");
             return;
         }
+
         allCentersJson = new JSONArray();
-        for (var vc : allCenters) {
+        for (VaccinationCenters vc : allCenters) {
             JSONObject json = new JSONObject();
             json.put("id", vc.getId());
             json.put("name", vc.getName());
@@ -35,9 +35,9 @@ public class Centerlist extends HttpServlet {
             json.put("postal", vc.getPostal());
             allCentersJson.put(json);
         }
+
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
         resp.getWriter().println(allCentersJson);
     }
-
 }

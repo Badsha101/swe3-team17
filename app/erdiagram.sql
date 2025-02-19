@@ -4,14 +4,14 @@ use test;
 CREATE TABLE admin (
     id INT AUTO_INCREMENT PRIMARY KEY,
 
-    email VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL unique,
     password VARCHAR(255) NOT NULL
 );
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     firstname VARCHAR(255) NOT NULL,
     lastname VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL unique,
     password VARCHAR(255) NOT NULL
 );
 CREATE TABLE relatives (

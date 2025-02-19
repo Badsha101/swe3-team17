@@ -2,7 +2,6 @@ package hbv.web.Servlets;
 
 import hbv.web.Dao.Admindao;
 import hbv.web.Module.Admin;
-import hbv.web.db.DBUtil;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -30,14 +29,11 @@ public class adminLoginServlet  extends HttpServlet {
       RequestDispatcher dispatcher = request.getRequestDispatcher("Admin_dashboard.html");
       dispatcher.forward(request, response);
       System.out.println("Success");
-//
-//        if(email.equals("ok@gmail.com")){
-//            response.sendRedirect("https://youtube.com");
+
 
   } else {
-//            RequestDispatcher dispatcher = request.getRequestDispatcher("user_login.html?error=1");
-//            dispatcher.forward(request, response);
-        response.sendRedirect("admin_login.html?error=1");
+
+        response.sendRedirect("adminLogin.html?error=1");
 
 
     }

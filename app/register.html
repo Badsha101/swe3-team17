@@ -1,76 +1,71 @@
 <!DOCTYPE html>
 <html lang="de">
-<link rel="stylesheet" href="indexStyle.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="navbar.css">
-
-<body onload="getUserId()">
+<head>
+    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
 <div class="navbar">
-    <a href="index.html" >Home</a>
+    <a href="index.html">Home</a>
     <a href="#" class="active">Registrieren</a>
-    <a href="login.html"  >Einloggen</a>
-    <a href="adminLogin.html" class="roll" >Admin</a>
-
-    <!--    <a href="#">Ueber Uns</a>-->
+    <a href="userLogin.html">Einloggen</a>
+    <a href="adminLogin.html" class="roll">Admin</a>
 </div>
-    <div class="container">
-        <h1>Registrieren</h1>
-        <form action="/register" method="post">
 
+<div class="container">
+    <h1>Registrieren</h1>
+    <form action="register" method="post">
+        <label for="firstname">Vorname :</label>
+        <input type="text" id="firstname" name="firstname" required class="input-field">
 
+        <label for="lastname">Nachname :</label>
+        <input type="text" id="lastname" name="lastname" required class="input-field">
 
-            <label for="firstname">Vorname :</label>
-            <input type="text" id="firstname" name="firstname" required class="input-field" >
+        <label for="email">E-mail Adresse :</label>
+        <input type="email" id="email" name="email" required class="input-field">
 
-            <label for="lastname">Nachname :</label>
-            <input type="text" id="lastname" name="lastname" required class="input-field" >
+        <label for="password1">Passwort :</label>
+        <input type="password" id="password1" name="password1" required class="input-field">
 
+        <label for="password2">Passwort wiederholen:</label>
+        <input type="password" id="password2" name="password2" required class="input-field">
 
+        <br><br>
+        <button type="submit">Registrieren</button>
+    </form>
 
-            <label for="email">E-mail Adresse :</label>
-            <input type="email" id="email" name="email" required class="input-field">
-
-            <label for="password1">Passwort :</label>
-            <input type="password" id="password1" name="password" required class="input-field">
-            <label for="password2">Passwort wiederholen:</label>
-            <input type="password" id="password2" name="password" required class="input-field">
-
-
-
-
-            <br><br>
-            <button type="submit">Registrieren</button>
-
-
-        </form>
-        <p><a href="login.html" class="links">Einloggen</a></p>
-    </div>
+    <p><a href="userLogin.html" class="links">Einloggen</a></p>
 
     <script>
-       // Get the error parameter from the URL (assuming it's passed as a query parameter)
-       const urlParams = new URLSearchParams(window.location.search);
-       const error = urlParams.get("error");
+        // Get the error parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get("error");
 
-       // Check for the error parameter and display the message if it's "1"
-       if (error === "1") {
-         const errorElement = document.createElement("p");
-         errorElement.style.color = "red";
-         errorElement.textContent = "Registration failed. Please try again.";
+        if (error === "1") {
+            displayError("Registration failed. Please try again.");
+        } else if (error === "emailexists") {
+            displayError("Email exists, please enter another email.");
+        } else if (error === "passwordmismatch") {
+            displayError("Passwords do not match. Please try again.");
+        } else if (error === "success") {
+            displaySuccess("Registration successful! You can now log in.");
+        }
 
+        function displayError(message) {
+            const errorElement = document.createElement("p");
+            errorElement.style.color = "red";
+            errorElement.textContent = message;
+            document.querySelector(".container").appendChild(errorElement);
+        }
 
-         const parentElement = document.querySelector(".container"); //
-         parentElement.appendChild(errorElement);
-       }  else if(error === "emailexists") {
-         const errorElement = document.createElement("p");
-         errorElement.style.color = "red";
-         errorElement.textContent = "Email exists, please enter another email";
-
-
-         const parentElement = document.querySelector(".container"); //
-         parentElement.appendChild(errorElement);
-       }
-
-      </script>
-
+        function displaySuccess(message) {
+            const successElement = document.createElement("p");
+            successElement.style.color = "green";
+            successElement.textContent = message;
+            document.querySelector(".container").appendChild(successElement);
+        }
+    </script>
+</div>
 </body>
 </html>
