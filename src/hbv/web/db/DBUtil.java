@@ -34,7 +34,7 @@ public class DBUtil {
     // Insert Vaccination Center
     public static int insertVaccinationCenter(Connection connection, VaccinationCenters vaccinationCenter)
             throws SQLException {
-        String query = "INSERT INTO impfzentren(name, street, city, postalcode) VALUES(?,?,?,?)";
+        String query = "INSERT INTO Impfzentren(name, street, city, postalcode) VALUES(?,?,?,?)";
         try (PreparedStatement pss = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             pss.setString(1, vaccinationCenter.getName());
             pss.setString(2, vaccinationCenter.getStrasse());
@@ -74,7 +74,7 @@ public class DBUtil {
 
     // Insert Vaccines
     public static int insertVaccines(Connection connection, Vaccine vaccine) throws SQLException {
-        String query = "INSERT INTO impfung(Name, Anzahl) VALUES(?,?)";
+        String query = "INSERT INTO Impfung(Name, Anzahl) VALUES(?,?)";
         try (PreparedStatement pss = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             pss.setString(1, vaccine.getName());
             pss.setInt(2, vaccine.getCount()); // Change to setInt()
